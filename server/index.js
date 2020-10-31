@@ -7,5 +7,5 @@ app.use('/api/post', api)
 app.use(bodyParser.json())
 app.use(cors())
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 app.listen(port, ()=> console.log(port))
