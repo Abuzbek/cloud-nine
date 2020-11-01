@@ -1,9 +1,11 @@
 <template>
   <nav id="nav" class=" navbar-expand-lg navbar fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img width="100px" :src="require('../assets/nine.png')" alt=""></a>
+      <a class="navbar-brand" href="#"><img width="80px" :src="require('../assets/logo.png')" alt=""></a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="black-text text-black">=</span>
+      <span class="black-text text-black">
+        <i class="fas fa-bars"></i>
+      </span>
     </button>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav" style="margin:0;">
@@ -64,7 +66,7 @@ export default {
         else {
             $('#nav').removeClass('active');
         }
-       let $links = $('.navbar .navbar-nav .nav-item .nav-link')
+       let $links = $('.nav-link')
        console.log($links);
         $links.each(function () {
             let $id = $(this).attr('href');
@@ -76,7 +78,7 @@ export default {
             }
         })  
     });
-    let links = ('#nav .nav-link');
+    let links = ('.nav-link');
     $(links).on('click', function (e) {
         e.preventDefault();
         $(links).removeClass('active');

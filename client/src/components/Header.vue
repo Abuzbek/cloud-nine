@@ -22,7 +22,7 @@
                   <div class="header_title">
                       <h1>Biz <span>ijodiy</span> <br> veb-studiyamiz!</h1>
                       <p> <span class="text-primary">CloudNine</span> - ulkan maqsadli, o'zaro manfaatli hamkorlikni taklif qilayotgan ishonchli IT kompaniyasi! </p>
-                      <button v-ripple class="btn btn-primary">Buyurtma berish</button>
+                      <a  v-ripple class="btn btn-primary nav-link text-white d-inline-block" href="#contact">Buyurtma berish</a>
                       <div class="social">
                         <div class="phone d-flex align-items-center">
                           <a class="btn-floating btn-sm btn-ph waves-effect waves-light" type="button" role="button"><i  style="transform:rotateY(180deg);" class="fas fa-phone"></i></a>

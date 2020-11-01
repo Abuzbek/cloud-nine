@@ -22,7 +22,7 @@
 
 </template>
 <script>
-// import  $  from 'jquery';
+import  axios  from 'axios';
 export default {
   name: 'WriteUs',
   data(){
@@ -39,8 +39,13 @@ export default {
       console.log({
         name: this.name,
         phone: this.phone,
-        item: this.items[this.selectedItem].title
+        list: this.items[this.selectedItem].title
       });
+      axios.post('/api/user', {
+        name: this.name,
+        number: this.phone,
+        list: this.items[this.selectedItem].title
+      })
     }
   }
 };

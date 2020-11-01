@@ -17,7 +17,7 @@
                         </div>
                         <div class="card-body">
                             <p>{{ n.title }}</p>
-                            <a href="#!" v-ripple class="btn btn-outline-primary">Buyurtma berish</a>
+                            <a v-ripple class="btn btn-outline-primary nav-link d-inline-block" href="#contact">Buyurtma berish</a>
                         </div>
                     </div>
                 </div>
@@ -56,9 +56,9 @@ const card = [
   },
   {
     _id:'4',
-    img: require('../assets/cardSvg/card4.svg'),
-    heading:'SEO optimizatsiya',
-    title: "SEO optimizatsiyasi ustasi - qidiruv tizimlarida saytingizni yuqori o'rinni egallashini ta'minlashga erishishda yordamchi",
+    img: require('../assets/cardSvg/Vector.svg'),
+    heading:'Grafik Dizayn',
+    title: "Grafik Dizayner - Turli hildagi smm postlar, logotiplar, creative rasmlar, maxsulot qadoqlari dizayni, shunga oxshash maxsulotlar tayyorlaydi ",
     price: 'от 1000 $'
   },
 ] 
@@ -103,6 +103,10 @@ section h1{
     border-radius: 10em !important;
     padding: 10px 30px;
     font-size: 14px;
+    color: #007bff;
+}
+.card .btn:hover {
+    color: #fff;
 }
 .card .btn:focus {
     box-shadow:none !important;
