@@ -10,38 +10,38 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav" style="margin:0;">
           <li class="nav-item">
-            <a href="#home" class="nav-link active">Home</a>
+            <a href="#home" class="nav-link active">Bosh sahifa</a>
           </li>
           <li class="nav-item">
-            <a href="#cards" class="nav-link">About</a>
+            <a href="#cards" class="nav-link">Xizmatlarimiz</a>
           </li>
           <li class="nav-item">
             <a href="#portfolio" class="nav-link">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a href="#team" class="nav-link">Team</a>
+            <a href="#team" class="nav-link">Jamoamiz</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact Us</a>
+            <a href="#contact" class="nav-link">Aloqa</a>
           </li>
         </ul>
       </div>
       <div  id="navbarSupportedContent">
          <ul class="navbar-nav" style="margin:0;">
           <li class="nav-item">
-            <a href="#home" class="nav-link active">Home</a>
+            <a href="#home" class="nav-link active">Bosh sahifa</a>
           </li>
           <li class="nav-item">
-            <a href="#cards" class="nav-link">About</a>
+            <a href="#cards" class="nav-link">Xizmatlarimiz</a>
           </li>
           <li class="nav-item">
             <a href="#portfolio" class="nav-link">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a href="#team" class="nav-link">Team</a>
+            <a href="#team" class="nav-link">Jamoamiz</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact Us</a>
+            <a href="#contact" class="nav-link">Aloqa</a>
           </li>
         </ul>
       </div>

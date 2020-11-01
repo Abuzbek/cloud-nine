@@ -6,11 +6,11 @@
     <div class="infoBlock pb-3">
       <div class="phone py-3">
         <img :src="require('../assets/cardSvg/telephone.png')" alt="" />
-        <span>+998 98 765 43 21</span>
+        <a href="tel:+998990395709">+998 99 039 57 09</a>
       </div>
       <div class="location py-3">
         <img :src="require('../assets/cardSvg/Group.png')" alt="" />
-        <span>Mo`ljal Huvaydo restorani</span>
+        <a href="#!">Mo`ljal Huvaydo restorani</a>
       </div>
     </div>
   </div>
@@ -73,8 +73,9 @@ export default {
   display: flex;
   align-items: center;
 }
-.phone span,
-.location span {
+.phone a,
+.location a {
+  color: black;
   margin-left: 15px;
   font-size: 14px;
   line-height: 24px;

@@ -4,7 +4,7 @@
             <div class="row">
               <div class="col-12">
                 <h1>
-                  Bizning ishimiz:
+                  Portfolio
                 </h1>
               </div>
             </div>

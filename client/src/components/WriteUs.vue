@@ -1,21 +1,21 @@
  <template>
  <div class="box">
      <div class="wrappering pt-5">
-       <h2>Напишите нам</h2>
+       <h2>Murojaat qiling</h2>
     <div class="md-form form-sm">
-      <input v-model="name" type="text" id="form8" class="form-control" placeholder="Имя">
+      <input v-model="name" type="text" id="form8" class="form-control" placeholder="Ismingiz">
     </div>
     <div class="md-form form-sm">
-      <input v-model="phone"  type="text" id="form8" class="form-control" placeholder="Телефон">
+      <input v-model="phone"  type="text" id="form8" class="form-control" placeholder="Telefon">
     </div>
     <div class="md-form position form-sm">
-      <button class="list" @click="list = !list">Тип услуги <i class="fas fa-chevron-right"></i></button>
+      <button class="list" @click="list = !list">{{ selectedItem ? items[selectedItem].title : "Maxsulotlar" }}<i class="fas fa-chevron-right"></i></button>
       <div class="list-parent" v-show="list">
         <div class="list-item" @click="list = !list; selectedItem = i" v-for="(n, i) in items" :key="n.title" :name="i" >{{ n.title }}</div>
       </div>
     </div>
     <div class="md-form form-sm">
-      <button @click="submitbtn" class="submit">Отправить заявку</button>
+      <button @click="submitbtn" class="submit">Jo'nating</button>
     </div>
   </div>
  </div>
@@ -31,7 +31,7 @@ export default {
       name:null,
       phone:null,
       list: false,
-      items:[{title:'Веб-сайт'},{title:'Мобильное приложение'},{title:'Телеграм боты'},{title:'SEO оптимизация'}]
+      items:[{},{title:'Web sayt'},{title:'Mobil ilova'},{title:'Telegram bot'},{title:'Grafik dizayn'}]
     }
   },
   methods: {
@@ -123,19 +123,22 @@ button:focus{
 }
 .position .list-parent{
   position: absolute;
-  right:-239px;
-  top: -56px;
+  right: -158px;
+  top: -86px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 15;
 }
 .position .list-parent .list-item{
-  padding: 15px 15px 11px 15px;
+  padding: 15px 35px 11px 15px;
   background: white;
   border: 1px solid #DBDBDB;
   cursor: pointer;
   transition: 0.5s;
+}
+.position .list-parent .list-item:first-child{
+ opacity: 0;
 }
 .position .list-parent .list-item:hover{
   background: #2794D2;
@@ -144,7 +147,7 @@ button:focus{
 @media(max-width:845px){
   .position .list-parent{
     right: 0;
-    top: -205px;
-  }
+    top: -235px;
+}
 }
 </style>
