@@ -22,6 +22,9 @@ db.once('open', function() {
 const indexRouter = require('./routes/index');
 
 const app = express();
+app.set('views', path.join(__dirname, 'views'));
+
+app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
@@ -48,7 +51,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.send('404');
+  res.render('error');
 });
 
 module.exports = app;

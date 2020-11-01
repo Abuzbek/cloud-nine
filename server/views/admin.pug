@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    each det , i in data
+      .alert
+        a(href=`tel:${det.number}`)= det.number
+        h4= det.name 
+        h5= det.list 

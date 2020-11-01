@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  each det , i in data
+      .alert
+        img(src=`${det.img}`, alt="")
+        h4= det.item 
+        h5= det.title   
+        a(href=`${det.link}`)= det.link   
