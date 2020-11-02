@@ -11,12 +11,6 @@
                 <path id="f" d="M108.644 128.55C108.644 121.372 110.167 114.55 112.904 108.387C101.636 111.536 93.3673 121.871 93.3673 134.143C93.3673 134.448 93.3807 134.75 93.3898 135.051C91.5099 134.461 89.51 134.143 87.4358 134.143C76.4537 134.143 67.5503 143.045 67.5503 154.03C67.5503 165.013 76.4541 173.915 87.4358 173.915H137.967C120.68 166.125 108.644 148.743 108.644 128.55Z" fill="#D7EDF9"/>
             </svg>
           </div>
-          <div class="right_circle">
-              <div class="full">
-                  <div id="particles-js"></div>
-                <img :src="require('../assets/header.jpg')" alt="">
-              </div>
-          </div>
           <div class="row">
               <div class="col-lg-6">
                   <div class="header_title">
@@ -36,6 +30,9 @@
                       </div>
                       
                   </div>
+              </div>
+              <div class="col-lg-6">
+                  <img src="https://weltlink.uz/wp-content/themes/weltlink/images/Flying_Macbook_Mockup.png" alt="">
               </div>
           </div>
       </div>
@@ -78,16 +75,18 @@ header .header_title{
   padding-top:80px;
   margin-top: 50px;
 }
-header{
+header .container{
     position: relative;
-    overflow: hidden;
-    padding-bottom: 15px;
-    height: 100vh;
+    padding-bottom: 60px;
+}
+header img{
+    max-width: 100%;
+    height: auto;
 }
 header .cloud_absolute{
     position: absolute;
     top: 100px;
-    left: 40px;
+    left: -40px;
 }
 header .header_title h1 {
     font-size: 60px;
@@ -165,41 +164,6 @@ header .header_title .phone a.phone{
     font-weight: 300;
     color: #2a2a2a;
 }
-header .right_circle{
-    position: absolute;
-    width: 1305px;
-    height: 1368px;
-    left: 774px;
-    top: -319px;
-    border-radius: 50%;
-    border: 10px solid #4200FF;
-    overflow: hidden;
-}
-header .right_circle .full{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 30px;
-    border:40px solid #DBDBDB;
-    background: #323232;
-}
-header .right_circle img{
-    transform: translateY(210px);
-    clip-path:inset(0 0 100% 0);
-    width: 57%;
-    transition: 1s;
-    object-fit: cover;
-}
-header .full #particles-js{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 30;
-}
 @media (max-width:1264px) {
     header{
       height: auto;
@@ -210,37 +174,13 @@ header .full #particles-js{
       font-weight: 800;
       color: #2a2a2a;
     }
-    header .right_circle {
-        position: absolute;
-        width: 1305px;
-        height: 1368px;
-        left: 681px;
-        top: -319px;
-        border-radius: 50%;
-        border: 10px solid #4200FF;
-        overflow: hidden;
-    }
 }
 @media (max-width:1199px) {
-   header .right_circle {
-        left: 40%;
-        border: 0px solid #4200FF;
-    }
     header .header_title p {
         max-width: 379px;
     }
 }
 @media (max-width:991px) {
-   header .right_circle {
-        width: 100%;
-        height: 100%;
-        left:0;
-        top:0;
-        border: none;
-    }
-    header .right_circle .full {
-        display: none;
-    }
     header .header_title{
         padding-top: 80px;
         margin-top: 50px;
