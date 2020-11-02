@@ -3,10 +3,10 @@
      <div class="wrappering pt-5">
        <h2>Murojaat qiling</h2>
     <div class="md-form form-sm">
-      <input v-model="name" type="text" id="form8" class="form-control" placeholder="Ismingiz">
+      <input v-model="name" required type="text" id="form8" class="form-control" placeholder="Ismingiz">
     </div>
     <div class="md-form form-sm">
-      <input v-model="phone"  type="text" id="form8" class="form-control" placeholder="Telefon +998991234567">
+      <input v-model="phone"   required  type="text" id="form9" class="form-control" placeholder="Telefon +998991234567">
     </div>
     <div class="md-form position form-sm">
       <button class="list" @click="list = !list">{{ selectedItem ? items[selectedItem].title : "Maxsulotlar" }}<i class="fas fa-chevron-right"></i></button>
@@ -15,10 +15,8 @@
       </div>
     </div>
     <div class="md-form form-sm">
-      <button @click="submitbtn" class="submit">Jo'nating</button>
+      <button :disabled="!formIsValid" @click="submitbtn" class="submit">Jo'nating</button>
     </div>
-  
-  
   </div>
     <div class="message alert alert-primary" :class="{'active': active}">
       <strong >Muvaffaqiyatli habaringiz jonatildi tez orada sizga javob yozamiz</strong>
@@ -38,6 +36,11 @@ export default {
       phone:null,
       list: false,
       items:[{},{title:'Web sayt'},{title:'Mobil ilova'},{title:'Telegram bot'},{title:'Grafik dizayn'}]
+    }
+  },
+  computed:{
+    formIsValid(){
+      return this.selectedItem && this.phone && this.name
     }
   },
   methods: {
@@ -128,6 +131,11 @@ input:focus{
 button:focus{
   outline: none;
   border: 1px solid #DBDBDB;
+}
+button[disabled]{
+  background: rgba(224, 223, 255, 0.8);
+  color: black;
+  cursor: default;
 }
 .submit{
   display: block;

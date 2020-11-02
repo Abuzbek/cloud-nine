@@ -73,6 +73,22 @@
         setTimeout(()=>{
           $('.overlay').fadeOut()
         }, 3000)
+        let inp = document.querySelector('#form9')  
+        console.log(inp);
+        inp.addEventListener('input', function (){
+          let patter = /^(+){0,1}([0-9])*$/;
+          
+          console.log(patter.test(this.value));
+          if(!patter.test(this.value)){
+            let num = this.value.replace(/[^0-9\.]/g, '')
+            if(this.value[0] == '+' ){
+              num += '+'
+            }
+            if(patter.test(num)){
+              this.value = num
+            }
+          }
+        })
       })
     </script>
   </body>
