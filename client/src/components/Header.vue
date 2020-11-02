@@ -31,7 +31,7 @@
                       
                   </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 macbook" >
                   <img src="https://weltlink.uz/wp-content/themes/weltlink/images/Flying_Macbook_Mockup.png" alt="">
               </div>
           </div>
@@ -87,6 +87,9 @@ header .cloud_absolute{
     position: absolute;
     top: 100px;
     left: -40px;
+}
+header .macbook{
+    padding-top: 60px;
 }
 header .header_title h1 {
     font-size: 60px;
@@ -186,6 +189,11 @@ header .header_title .phone a.phone{
         margin-top: 50px;
         padding-left: 100px;
     }
+    header .cloud_absolute{
+        position: absolute;
+        top: 100px;
+        left: 10px;
+    }
 }
 @media (max-width:767px) {
     header .header_title{
@@ -193,8 +201,21 @@ header .header_title .phone a.phone{
         margin-top: 50px;
         padding-left: 0;
     }
+    header .macbook{
+        padding-top: 20px;
+    }
+    header .cloud_absolute{
+        position: absolute;
+        top: 100px;
+        left: -40px;
+    }
 }
 @media (max-width:575px) {
+     header .cloud_absolute{
+        position: absolute;
+        top: 100px;
+        left: 50px;
+    }
     header .header_title{
        text-align: center;
     }
@@ -221,6 +242,23 @@ header .header_title .phone a.phone{
         margin-bottom: 40px;
         text-align: center;
     }
+    header .macbook{
+      display: none;
+    }
+}
+@media (max-width:420px) {
+header .cloud_absolute[data-v-61dd7a3d] {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+}
+@media (max-width:320px) {
+header .cloud_absolute[data-v-61dd7a3d] {
+    position: absolute;
+    top: 100px;
+    left: -10px;
+}
 }
 @media(min-width:1500px){
     header .cloud_absolute{
