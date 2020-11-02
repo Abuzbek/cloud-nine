@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container.p-4
+    .row
+      each user , i in data
+        .col-md-6
+          .alert.alert-primary
+            strong #{user.name}
+            a(href=`tel:${user.number}`).mx-3 #{user.number}
+            em= user.list
+

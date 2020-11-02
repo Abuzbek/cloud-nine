@@ -6,7 +6,7 @@
       <input v-model="name" type="text" id="form8" class="form-control" placeholder="Ismingiz">
     </div>
     <div class="md-form form-sm">
-      <input v-model="phone"  type="text" id="form8" class="form-control" placeholder="Telefon">
+      <input v-model="phone"  type="text" id="form8" class="form-control" placeholder="Telefon +998991234567">
     </div>
     <div class="md-form position form-sm">
       <button class="list" @click="list = !list">{{ selectedItem ? items[selectedItem].title : "Maxsulotlar" }}<i class="fas fa-chevron-right"></i></button>
@@ -17,7 +17,12 @@
     <div class="md-form form-sm">
       <button @click="submitbtn" class="submit">Jo'nating</button>
     </div>
+  
+  
   </div>
+    <div class="message alert alert-primary" :class="{'active': active}">
+      <strong >Muvaffaqiyatli habaringiz jonatildi tez orada sizga javob yozamiz</strong>
+    </div>
  </div>
 
 </template>
@@ -27,6 +32,7 @@ export default {
   name: 'WriteUs',
   data(){
     return {
+      active:false,
       selectedItem:null,
       name:null,
       phone:null,
@@ -46,6 +52,13 @@ export default {
         number: this.phone,
         list: this.items[this.selectedItem].title
       })
+      this.active = true
+      setTimeout(()=>{
+        this.active = false
+      },4000)
+      this.name = ''
+      this.phone = ''
+      this.items.title = ''
     }
   }
 };
@@ -56,6 +69,18 @@ export default {
   height: 100%;
   background: linear-gradient(180deg, rgba(224, 223, 255, 0.8) 0%, rgba(236, 236, 255, 0.5) 100%);
   padding-bottom: 40px;
+}
+.box .message{
+  position: fixed;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 1s;
+  z-index: 20;
+}
+.box .message.active{
+  bottom: 40px;
+  transition: 1s;
 }
 .wrappering{
   max-width: 350px;

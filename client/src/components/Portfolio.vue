@@ -140,7 +140,7 @@ section h1{
      content: '';
      position: absolute;
      display: block;
-     background: linear-gradient(to top, #2824EA , transparent);
+     background:rgba(42, 42, 42, 0.7);
      z-index: 5;
      top: 0;
      left: 0;

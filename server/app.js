@@ -20,22 +20,37 @@ db.once('open', function() {
 
 // ======== mongoose connection ========
 const indexRouter = require('./routes/index');
+const adminRouter = require('./routes/admin');
+
 
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'pug');
+
 app.use(logger('dev'));
+
 app.use(cors());
+
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: true }));
+
 app.use(cookieParser());
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/api', indexRouter);
+app.use('/admin', adminRouter);
+
 if( process.env.NODE_ENV === "production" ){
+
   app.use(express.static(__dirname + '/public'))
+
   app.get(/.*/, (req,res)=>{
+
     res.sendFile(__dirname+'/public/index.html')
+
   })
 }
 // catch 404 and forward to error handler

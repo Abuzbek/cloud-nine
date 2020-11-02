@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  .container.p-4
+    .row.my-4
+      .col-md-6.m-auto
+        h2 Add Product
+        form(method="POST" action="/admin/pro")
+          .form-group
+            label(for='exampleInputEmail1') Portfolio Name
+            input#exampleInputEmail1.form-control(name="item" type='text' aria-describedby='emailHelp')
+          .form-group
+            label(for='exampleInputPassword1') Portfolio Title
+            input#exampleInputPassword1.form-control(name="title" type='text')
+          .form-group
+            label(for='exampleInputPassword1') Portfolio Link
+            input#exampleInputPassword1.form-control(name="link" type='text')
+          .form-group
+            label(for='exampleInputPassword1') Portfolio Img Link
+            input#exampleInputPassword1.form-control(name="img" type='text')  
+          button.btn.btn-primary(type='submit') Submit
+
+    .row
+      each product , i in data
+       .col-md-4
+        .card(style='width: 18rem;')
+          img.card-img-top(src=`${product.img}` alt='...')
+          .card-body
+            h5.card-title #{product.item}
+            p.card-text
+              | #{product.title}
+            a.btn.btn-primary(href=`${product.link}`).mx-3 Go
+            a.btn.btn-danger(href=`/admin/delete/${product._id}`).mx-3 Delete
+
