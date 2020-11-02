@@ -35,30 +35,25 @@
   import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
   const team = [
     {
-      img:'https://www.aii-group.com/wp-content/uploads/2019/09/Trivan-Mathur.jpg',
+      img:'https://i.ibb.co/BKR9W2D/1-2.jpg',
       teamName: 'Sardorbek Ahmadaliyev',
       work: 'Company Director'
     },
     {
-      img:'https://www.alhaya-medical.com/wp-content/uploads/2017/11/team-member-3.jpg',
+      img:'https://i.ibb.co/4FN1Tkn/1-03.png',
       teamName: 'Abdumannon Tojiboev',
       work: 'Full stack developer'
     },
     {
-      img:'https://selexis.com/wp-content/uploads/2018/09/Severine_Fagete-350x350-2018SEP14.jpg',
-      teamName: 'Lara Popins',
+      img:'https://i.ibb.co/G5D5r0K/photo-2020-10-31-21-07-19.jpg',
+      teamName: 'Sardor Abduganiyev',
       work: 'Front-end Developer'
     },
     {
-      img:'https://www.alhaya-medical.com/wp-content/uploads/2017/11/team-member.jpg',
-      teamName: 'Abdumannon Tojiboev',
+      img:'https://i.ibb.co/9yn97JZ/4-2.jpg',
+      teamName: 'Savriev Javokhir',
       work: 'Backend Developer'
-    },
-    {
-      img:'https://i.imgur.com/HTb2oMH.png',
-      teamName: 'Abdumannon Tojiboev',
-      work: 'Design'
-    },
+    }
   ]
   export default {
     name: 'Header',
