@@ -189,7 +189,7 @@ header .header_title .phone a.phone{
 }
 @media (max-width:767px) {
     header .header_title{
-        padding-top: 80px;
+        padding-top: 120px;
         margin-top: 50px;
         padding-left: 0;
     }
@@ -220,6 +220,13 @@ header .header_title .phone a.phone{
         font-weight: 700;
         margin-bottom: 40px;
         text-align: center;
+    }
+}
+@media(min-width:1500px){
+    header .cloud_absolute{
+        position: absolute;
+        top: 100px;
+        left: -100px;
     }
 }
 </style>
