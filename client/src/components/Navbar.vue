@@ -10,9 +10,6 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav" style="margin:0;">
           <li class="nav-item">
-            <a href="#home" class="nav-link active">Bosh sahifa</a>
-          </li>
-          <li class="nav-item">
             <a href="#cards" class="nav-link">Xizmatlarimiz</a>
           </li>
           <li class="nav-item">
@@ -28,9 +25,6 @@
       </div>
       <div  id="navbarSupportedContent">
          <ul class="navbar-nav" style="margin:0;">
-          <li class="nav-item">
-            <a href="#home" class="nav-link active">Bosh sahifa</a>
-          </li>
           <li class="nav-item">
             <a href="#cards" class="nav-link">Xizmatlarimiz</a>
           </li>
@@ -57,6 +51,15 @@ gsap.registerPlugin(CSSPlugin);
 export default {
   name: 'Navbar',
   mounted () {
+    let links = ('.nav-link');
+    $(links).on('click', function (e) {
+        e.preventDefault();
+        let id = $(this).attr('href');
+        let target = $(id).offset().top;
+        $('html, body').animate({
+            scrollTop: target,
+        }, 1000);
+    });
     $(window).scroll(function () {
       let $scroll = $(this).scrollTop();
         console.log($scroll);
@@ -70,24 +73,13 @@ export default {
        console.log($links);
         $links.each(function () {
             let $id = $(this).attr('href');
-            console.log($id);
             let $target = $($id).offset().top-100;
+            console.log($target);
             if ($scroll >= $target) {
                 $links.removeClass('active')
                 $(this).addClass('active')
             }
         })  
-    });
-    let links = ('.nav-link');
-    $(links).on('click', function (e) {
-        e.preventDefault();
-        $(links).removeClass('active');
-        $(this).addClass('active');
-        let id = $(this).attr('href');
-        let target = $(id).offset().top;
-        $('html, body').animate({
-            scrollTop: target,
-        }, 1000);
     });
     $('.navbar-toggler').click(function(){
       let attrib = $(this).attr('data-target')

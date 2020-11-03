@@ -38,17 +38,19 @@ export default {
 }
 .navbar-nav{
   flex-direction: row !important;
+   margin: auto !important;
 }
 .nav-link {
     display: block;
     padding: .5rem 1rem !important;
     color: #2a2a2a;
+    font-weight: 700;
 }
 .collapse.navbar-collapse{
   transition: 1s !important;
 }
 .nav-link.active {
-    font-weight: 700;
+  color: #007bff;
 }
 /*  =======================  components  ===============  */
 body{

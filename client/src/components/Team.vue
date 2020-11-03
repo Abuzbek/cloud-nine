@@ -36,7 +36,7 @@
   const team = [
     {
       img:'https://i.ibb.co/BKR9W2D/1-2.jpg',
-      teamName: 'Sardorbek Ahmadaliyev',
+      teamName: 'Sardorbek Akhmadaliev',
       work: 'Company Director'
     },
     {
@@ -47,12 +47,12 @@
     {
       img:'https://i.ibb.co/G5D5r0K/photo-2020-10-31-21-07-19.jpg',
       teamName: 'Sardor Abduganiyev',
-      work: 'Front-end Developer'
+      work: 'Designer'
     },
     {
       img:'https://i.ibb.co/9yn97JZ/4-2.jpg',
       teamName: 'Savriev Javokhir',
-      work: 'Backend Developer'
+      work: 'Android Developer'
     }
   ]
   export default {

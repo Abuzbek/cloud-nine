@@ -72,11 +72,11 @@
       window.addEventListener('load', function(){
         setTimeout(()=>{
           $('.overlay').fadeOut()
-        }, 3000)
+        }, 2000)
         let inp = document.querySelector('#form9')  
         console.log(inp);
         inp.addEventListener('input', function (){
-          let patter = /^(+){0,1}([0-9])*$/;
+          let patter = /^('+'){0,1}([0-9])*$/;
           
           console.log(patter.test(this.value));
           if(!patter.test(this.value)){

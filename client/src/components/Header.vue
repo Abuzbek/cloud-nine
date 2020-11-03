@@ -49,7 +49,7 @@ export default {
   name: 'Header',
   mounted () {
       const tl = gsap.timeline()
-      tl.from('.cloud path', {duration:1,x:-100,stagger:.2, delay:4})
+      tl.from('.cloud path', {duration:1,x:-100,stagger:.2, delay:1.6})
       tl.from('.header_title h1', {duration:1.2, y:100, opacity:0,stagger:.2})
       tl.from('.header_title p', {duration:0.9, x:100, opacity:0,stagger:.4})
       tl.from('.social', {duration:0.9, y:100, opacity:0,stagger:.4})
@@ -260,11 +260,19 @@ header .cloud_absolute[data-v-61dd7a3d] {
     left: -10px;
 }
 }
+@media(min-width:1200px){
+    /* header{
+        
+    } */
+}
 @media(min-width:1500px){
     header .cloud_absolute{
         position: absolute;
         top: 100px;
         left: -100px;
+    }
+    header .header_title p{
+        margin: 40px 0;
     }
 }
 </style>
