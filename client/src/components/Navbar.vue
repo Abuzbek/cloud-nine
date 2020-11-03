@@ -2,7 +2,7 @@
   <nav id="nav" class=" navbar-expand-lg navbar fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><img width="80px" :src="require('../assets/logo.png')" alt=""></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="black-text text-black">
         <i class="fas fa-bars"></i>
       </span>
@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div>
-      <div  id="navbarSupportedContent">
+      <div class="navbarSupportedContent">
          <ul class="navbar-nav" style="margin:0;">
           <li class="nav-item">
             <a href="#cards" class="nav-link">Xizmatlarimiz</a>
@@ -39,6 +39,7 @@
           </li>
         </ul>
       </div>
+      <div class="overlay_button navbar-toggler navbarSupportedContent"  data-target=".navbarSupportedContent"></div>
     </div>
   </nav>
 </template>
@@ -83,6 +84,7 @@ export default {
     });
     $('.navbar-toggler').click(function(){
       let attrib = $(this).attr('data-target')
+      console.log(attrib);
       $(attrib).toggleClass('active')
     })
   }
@@ -99,25 +101,27 @@ export default {
   width: 100%;
   height: auto;
   transition: 1s;
+  z-index: 1000 !important;
 }
 .fixed-top.active{
   background: rgba(255, 255, 255);
   transition: 1s;
 }
-#navbarSupportedContent{
+.navbarSupportedContent{
   position: fixed;
   left: -100%;
-  top: 83px;
+  top: 0px;
   bottom: 0;
   height: 100%;
   width: 60%;
   background: rgba(255, 255, 255);
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 2;
 }
-#navbarSupportedContent.active{
+.navbarSupportedContent.active{
   left: 0%;
 }
-#navbarSupportedContent .navbar-nav{
+.navbarSupportedContent .navbar-nav{
   width: 100%;
   height: 100%;
   display: flex;
@@ -125,8 +129,25 @@ export default {
   padding-top:70px;
   padding-left: 40px;
 }
-#navbarSupportedContent .navbar-nav .nav-link{
+.navbarSupportedContent .navbar-nav .nav-link{
   width: 100%;
   padding: 20px !important;
+}
+.overlay_button{
+  position: fixed;
+  background: rgba(0, 186, 243, 0.356);
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s, top 0s;
+}
+.overlay_button.active{
+  top: 0;
+  opacity: 1;
 }
 </style>

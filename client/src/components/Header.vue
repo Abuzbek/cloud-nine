@@ -53,7 +53,6 @@ export default {
       tl.from('.header_title h1', {duration:1.2, y:100, opacity:0,stagger:.2})
       tl.from('.header_title p', {duration:0.9, x:100, opacity:0,stagger:.4})
       tl.from('.social', {duration:0.9, y:100, opacity:0,stagger:.4})
-      tl.to('.right_circle img', {duration:1, clipPath: "inset(0 0 0 0)"})
   }
 }
 </script>

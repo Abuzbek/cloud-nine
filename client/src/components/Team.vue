@@ -144,6 +144,11 @@
    .swiper-pagination .swiper-pagination-bullet{
        width: 80px !important;
    }
+  @media (max-width:640px) {
+     .swiper-slide {
+      padding-bottom: 20px;
+    }
+   }
    @media (max-width:768px) {
      .swiper-slide {
       width: 50%;
